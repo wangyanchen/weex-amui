@@ -1,7 +1,8 @@
 <template>
   <slider
+    :auto-play="true"
     :style="{flex: 1}"
-    :infinite="false"
+    :infinite="true"
     :index="index"
     :scrollable="canScroll"
     @change="handelChange"
@@ -17,7 +18,7 @@ export default {
   props: {
     index: {
       type: Number,
-      default: 0
+      default: 1
     },
     width: {
       type: [Number, String],
@@ -25,7 +26,7 @@ export default {
     },
     canScroll: {
       type: Boolean,
-      default: true
+      default: false
     }
   },
   methods: {
