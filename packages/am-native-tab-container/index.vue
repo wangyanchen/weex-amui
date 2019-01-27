@@ -3,6 +3,7 @@
     :style="{flex: 1}"
     :infinite="false"
     :index="index"
+    :scrollable="canScroll"
     @change="handelChange"
   >
     <slot></slot>
@@ -21,6 +22,10 @@ export default {
     width: {
       type: [Number, String],
       default: 750
+    },
+    canScroll: {
+      type: Boolean,
+      default: true
     }
   },
   methods: {
