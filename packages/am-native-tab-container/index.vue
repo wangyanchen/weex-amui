@@ -4,6 +4,7 @@
     :infinite="false"
     :index="index"
     :scrollable="canScroll"
+    :forbid-slide-animation="showAnimation"
     @change="handelChange"
   >
     <slot></slot>
@@ -26,6 +27,10 @@ export default {
     canScroll: {
       type: Boolean,
       default: true
+    },
+    showAnimation: {
+      type: Boolean,
+      default: false
     }
   },
   methods: {
